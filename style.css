@@ -1,0 +1,64 @@
+*{
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+}
+
+.legend {
+  display: flex;
+  margin-top: 10px;
+}
+
+.legend div {
+  display: flex;
+  align-items: center;
+}
+
+.legend div label {
+  margin-right: 20px;
+  margin-left: 5px;
+}
+
+.seat {
+  width: 10px;
+  height: 10px;
+  background-color: black;
+}
+
+.seat.selected {
+  background-color: green;
+}
+
+.seat.occupied {
+  background-color: red;
+}
+
+.row {
+  display: flex;
+}
+
+.row .seat {
+  margin: 5px;
+}
+
+.row .seat:nth-of-type(2){
+  margin-right: 20px;
+}
+
+.row .seat:not(.occupied):hover{
+  cursor: pointer;
+  transform: scale(1.5);
+}
+
+#info {
+  margin-top: 10px;
+}
